@@ -63,48 +63,49 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 
 ## 패키지 구조 요약
 
-📁 **src (소스 루트)**
+```text
+📁 src (소스 루트)
  │
- ├─ 📁 **app**
- │  ├─ 📜 **JikFarmConsoleApp.java** (애플리케이션 실행 및 메뉴 제어)
- │  └─ 📜 **MyAppReader.java** (사용자 입력 처리)
+ ├─ 📁 app
+ │  ├─ 📜 JikFarmConsoleApp.java (애플리케이션 실행 및 메뉴 제어)
+ │  └─ 📜 MyAppReader.java (사용자 입력 처리)
  │
- ├─ 📁 **cart**
- │  ├─ 📜 **CartDAO.java** (장바구니 DAO 인터페이스)
- │  ├─ 📜 **CartItemVO.java** (장바구니 항목 데이터)
- │  ├─ 📜 **CartService.java** (장바구니 서비스 인터페이스)
- │  ├─ 📜 **CartServiceImpl.java** (장바구니 서비스 구현체)
- │  └─ 📜 **HashMapCartDAO.java** (메모리 기반 DAO 구현체)
+ ├─ 📁 cart
+ │  ├─ 📜 CartDAO.java (장바구니 DAO 인터페이스)
+ │  ├─ 📜 CartItemVO.java (장바구니 항목 데이터)
+ │  ├─ 📜 CartService.java (장바구니 서비스 인터페이스)
+ │  ├─ 📜 CartServiceImpl.java (장바구니 서비스 구현체)
+ │  └─ 📜 HashMapCartDAO.java (메모리 기반 DAO 구현체)
  │
- ├─ 📁 **order**
- │  ├─ 📜 **OrderDAO.java** (주문 DAO 인터페이스)
- │  ├─ 📜 **OrderItemVO.java** (주문 항목 데이터)
- │  ├─ 📜 **OrderService.java** (주문 서비스 인터페이스)
- │  ├─ 📜 **OrderServiceImpl.java** (주문 서비스 구현체)
- │  ├─ 📜 **OrderVO.java** (주문 데이터)
- │  └─ 📁 **file**
- │     └─ 📜 **ObjFileHashMapOrderDAO.java** (파일 저장 DAO 구현체)
+ ├─ 📁 order
+ │  ├─ 📜 OrderDAO.java (주문 DAO 인터페이스)
+ │  ├─ 📜 OrderItemVO.java (주문 항목 데이터)
+ │  ├─ 📜 OrderService.java (주문 서비스 인터페이스)
+ │  ├─ 📜 OrderServiceImpl.java (주문 서비스 구현체)
+ │  ├─ 📜 OrderVO.java (주문 데이터)
+ │  └─ 📁 file
+ │     └─ 📜 ObjFileHashMapOrderDAO.java (파일 저장 DAO 구현체)
  │
- ├─ 📁 **product**
- │  ├─ 📜 **ProductDAO.java** (상품 DAO 인터페이스)
- │  ├─ 📜 **ProductService.java** (상품 서비스 인터페이스)
- │  ├─ 📜 **ProductVO.java** (상품 데이터)
- │  ├─ 📜 **JFProductService.java** (상품 서비스 구현체)
- │  ├─ 📜 **HashMapProductDAO.java** (메모리 기반 DAO 구현체)
- │  ├─ 📜 **ListProductDAO.java** (리스트 기반 DAO 구현체 - *대체 가능*)
- │  └─ 📁 **file**
- │     ├─ 📜 **FileProductDB.java** (파일 DB 인터페이스)
- │     └─ 📜 **ObjFileHashMapProductDAO.java** (파일 저장 DAO 구현체)
+ ├─ 📁 product
+ │  ├─ 📜 ProductDAO.java (상품 DAO 인터페이스)
+ │  ├─ 📜 ProductService.java (상품 서비스 인터페이스)
+ │  ├─ 📜 ProductVO.java (상품 데이터)
+ │  ├─ 📜 JFProductService.java (상품 서비스 구현체)
+ │  ├─ 📜 HashMapProductDAO.java (메모리 기반 DAO 구현체)
+ │  ├─ 📜 ListProductDAO.java (리스트 기반 DAO 구현체 - *대체 가능*)
+ │  └─ 📁 file
+ │     ├─ 📜 FileProductDB.java (파일 DB 인터페이스)
+ │     └─ 📜 ObjFileHashMapProductDAO.java (파일 저장 DAO 구현체)
  │
- └─ 📁 **user**
-    ├─ 📜 **UserDAO.java** (사용자 DAO 인터페이스)
-    ├─ 📜 **UserService.java** (사용자 서비스 인터페이스)
-    ├─ 📜 **UserVO.java** (사용자 데이터)
-    ├─ 📜 **JFUserService.java** (사용자 서비스 구현체)
-    ├─ 📜 **HashMapUserDAO.java** (메모리 기반 DAO 구현체)
-    └─ 📁 **file**
-       ├─ 📜 **FileUserDB.java** (파일 DB 인터페이스)
-       └─ 📜 **ObjFileHashMapUserDAO.java** (파일 저장 DAO 구현체)
+ └─ 📁 user
+    ├─ 📜 UserDAO.java (사용자 DAO 인터페이스)
+    ├─ 📜 UserService.java (사용자 서비스 인터페이스)
+    ├─ 📜 UserVO.java (사용자 데이터)
+    ├─ 📜 JFUserService.java (사용자 서비스 구현체)
+    ├─ 📜 HashMapUserDAO.java (메모리 기반 DAO 구현체)
+    └─ 📁 file
+       ├─ 📜 FileUserDB.java (파일 DB 인터페이스)
+       └─ 📜 ObjFileHashMapUserDAO.java (파일 저장 DAO 구현체)
 
 ### 📦 패키지별 역할 요약
 
