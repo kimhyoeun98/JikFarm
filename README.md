@@ -320,8 +320,8 @@ VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 정의되어 있�
    ![역할별 서비스 호출 관계](image/adminService.png)
 
 * 애플리케이션의 시작점인 `JikFarmConsoleApp`이 사용자의 역할(관리자/일반 회원)을 판단하여 서로 다른 메뉴(`controlAdminMenu`, `controlUserMenu`)를 호출하는 컨트롤러 역할을 합니다.
-* __관리자(Admin)__는 상품, 회원, 주문 등 시스템의 모든 핵심 기능(`ProductService`, `UserService`, `OrderService`)에 접근하여 관리합니다.
-*  __일반 회원(Member)__은 상품을 조회하고 자신의 주문 내역을 확인하는 등 허용된 서비스에만 접근하여 기능을 사용합니다.
+* `관리자(Admin)`는 상품, 회원, 주문 등 시스템의 모든 핵심 기능(`ProductService`, `UserService`, `OrderService`)에 접근하여 관리합니다.
+* **일반 회원(Member)은** 상품을 조회하고 자신의 주문 내역을 확인하는 등 허용된 서비스에만 접근하여 기능을 사용합니다.
 
 
 ---
