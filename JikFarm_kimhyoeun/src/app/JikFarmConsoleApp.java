@@ -168,6 +168,9 @@ public class JikFarmConsoleApp {
 	private void controlUserMenu() {
 		int menu;
 		do {
+			if (loggedUser == null) {		
+        		break;
+        }
 			menu = selectMenu(memberMenuList);
 			// "로그아웃", "상품 목록", "상품 주문", "주문 목록", "장바구니 상품 담기", "장바구니 보기", "내 정보"
 			switch (menu) {
