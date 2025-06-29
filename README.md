@@ -64,18 +64,18 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 ## 패키지 구조 요약
 
 ```text
-📁 JikFarm
- ├─ 📁 app
- │  └─ 📜 JikFarmConsoleApp.java  (애플리케이션 실행 및 메뉴 제어)
+📁 **JikFarm**
+ ├─ 📁 **app**
+ │  └─ 📜 **JikFarmConsoleApp.java**  (애플리케이션 실행 및 메뉴 제어)
  │
- ├─ 📁 product
- │  ├─ 📜 ProductVO.java         (상품 데이터)
- │  ├─ 📜 ProductDAO.java        (상품 데이터 접근 인터페이스)
- │  ├─ 📜 HashMapProductDAO.java (메모리 기반 DAO 구현체)
- │  └─ 📜 JFProductService.java    (상품 비즈니스 로직)
+ ├─ 📁 **product**
+ │  ├─ 📜 **ProductVO.java**         (상품 데이터)
+ │  ├─ 📜 **ProductDAO.java**        (상품 데이터 접근 인터페이스)
+ │  ├─ 📜 **HashMapProductDAO.java** (메모리 기반 DAO 구현체)
+ │  └─ 📜 **JFProductService.java**    (상품 비즈니스 로직)
  │
- ├─ 📁 user
- │  ├─ 📜 UserVO.java            (사용자 데이터)
+ ├─ 📁 **user**
+ │  ├─ 📜 **UserVO.java**            (사용자 데이터)
  │  ├─ 📜 UserDAO.java           (사용자 데이터 접근 인터페이스)
  │  ├─ 📜 HashMapUserDAO.java    (메모리 기반 DAO 구현체)
  │  └─ 📜 JFUserService.java       (사용자 비즈니스 로직)
