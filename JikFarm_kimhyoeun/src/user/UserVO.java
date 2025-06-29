@@ -22,7 +22,6 @@ public class UserVO implements Serializable {
 		this.email = email;
 		this.address = address;
 		this.regDate = regDate;
-		this.userType = userType;
 	}
 
 	public UserVO(String id, String password, String userName) {
@@ -105,7 +104,7 @@ public class UserVO implements Serializable {
 		return output;
 				
 	}
-	
+	//추후에 userType별로 권한 나누는 작업을 진행할 예정
 	
 	
 
