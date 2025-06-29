@@ -186,6 +186,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
     ![유스케이스 다이어그램 이미지](image/UseCaseDiagram.png)
 
 <br>
+
 ---
 
 ### 2. 클래스 다이어그램 (Overall Class Diagram)
