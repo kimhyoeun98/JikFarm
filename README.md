@@ -174,6 +174,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 * **전체 회원/주문 목록 조회:** 시스템에 가입된 모든 회원 정보와 발생한 모든 주문 내역을 일괄 확인합니다. (`UserService.listAllUsers()`, `OrderService.listAllOrders()`)
 * **상품 등록/수정/삭제:** 새로운 상품을 추가하고, 기존 상품의 정보를 변경하며, 판매가 중단된 상품을 삭제합니다. (`ProductService.registProduct()`, `updateProduct...()`, `removeProduct()`)
 
+---
 <br>
 
 ## 📊 다이어그램
@@ -189,7 +190,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 ### 2. 클래스 다이어그램 (Overall Class Diagram)
 
 본 프로젝트의 주요 도메인 구조를 시각화한 클래스 다이어그램입니다.  
-VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 명확하게 정의되어 있습니다.
+VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 정의되어 있습니다.
 
 ### 전체 클래스 다이어그램 
    ![전체 클래스 다이어그램 이미지](image/AllclassDiagram.png)
