@@ -56,6 +56,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 
 * **언어:** Java (JDK 17)
 * **IDE:** Eclipse
+* **실행 방식:** Console 기반
 * **데이터 저장:** Java 객체 직렬화(Serialization)를 이용한 파일 시스템
 * **설계 및 문서화:** Visual Paradigm, PlantUML, Markdown
 
