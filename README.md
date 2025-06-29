@@ -57,10 +57,41 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 * **언어:** Java (JDK 17)
 * **IDE:** Eclipse
 * **데이터 저장:** Java 객체 직렬화(Serialization)를 이용한 파일 시스템
-* **설계 및 문서화:** PlantUML, Markdown
+* **설계 및 문서화:** Visual Paradigm, PlantUML, Markdown
 
 <br>
+## 패키지 구조 요약
 
+```text
+📁 JikFarm
+ ├─ 📁 app
+ │  └─ 📜 JikFarmConsoleApp.java  (애플리케이션 실행 및 메뉴 제어)
+ │
+ ├─ 📁 product
+ │  ├─ 📜 ProductVO.java         (상품 데이터)
+ │  ├─ 📜 ProductDAO.java        (상품 데이터 접근 인터페이스)
+ │  ├─ 📜 HashMapProductDAO.java (메모리 기반 DAO 구현체)
+ │  └─ 📜 JFProductService.java    (상품 비즈니스 로직)
+ │
+ ├─ 📁 user
+ │  ├─ 📜 UserVO.java            (사용자 데이터)
+ │  ├─ 📜 UserDAO.java           (사용자 데이터 접근 인터페이스)
+ │  ├─ 📜 HashMapUserDAO.java    (메모리 기반 DAO 구현체)
+ │  └─ 📜 JFUserService.java       (사용자 비즈니스 로직)
+ │
+ ├─ 📁 order
+ │  ├─ 📜 OrderVO.java           (주문 데이터)
+ │  ├─ 📜 OrderItemVO.java       (주문 항목 데이터)
+ │  ├─ 📜 OrderDAO.java          (주문 데이터 접근 인터페이스)
+ │  └─ 📜 OrderServiceImpl.java  (주문 비즈니스 로직)
+ │
+ ├─ 📁 cart
+ │  ├─ 📜 CartItemVO.java        (장바구니 항목 데이터)
+ │  ├─ 📜 CartDAO.java           (장바구니 데이터 접근 인터페이스)
+ │  └─ 📜 CartServiceImpl.java   (장바구니 비즈니스 로직)
+ │
+ └─ 📁 file (저장소 확장)
+    ├─ 📜 ObjFileHashMapUserDAO.java
 ## 📌 주요 기능
 
 * **회원 관리:** 회원가입, 로그인/로그아웃, 내 정보 관리, 회원 탈퇴
