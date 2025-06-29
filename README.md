@@ -141,12 +141,16 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 * **로그인/로그아웃:** 아이디와 비밀번호로 시스템에 접속하고, 접속을 종료합니다. (`UserService.login()`,`logout()`)
 * **내 정보 관리:** 로그인된 사용자가 자신의 비밀번호 등 개인 정보를 수정합니다. (`UserService.updatePassword()`)
 * **회원 탈퇴:** 사용자가 본인 확인 후 서비스를 탈퇴합니다. (`UserService.removeUser()`)
+  
+---
 
 ### **🌱 상품 관리**
 
 * **상품 목록 조회:** 판매 중인 모든 상품의 목록을 확인합니다. (`ProductService.listProducts()`)
 * **이름 검색:** 특정 키워드가 포함된 상품명을 검색하여 목록을 필터링합니다. (`ProductService.searchProductsByName()`)
 * **가격/이름순 정렬:** 전체 상품 목록을 가격순 또는 이름순으로 정렬하여 조회합니다. (`ProductService.listProducts(sortOption)`)
+  
+---
 
 ### **🛒 장바구니 관리**
 
@@ -155,11 +159,15 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 * **장바구니 삭제:** 장바구니에서 특정 상품을 제거합니다. (`CartService.removeCartItem()`)
 * **장바구니 비우기:** 장바구니의 모든 상품을 한번에 비웁니다. (`CartService.clearCart()`)
 
+---
+
 ### **📋 주문 관리**
 
 * **상품 즉시 주문:** 장바구니를 거치지 않고 상품 상세 화면에서 바로 주문합니다. (`OrderService.orderNow()`)
 * **장바구니 일괄 주문:** 장바구니에 담긴 모든 상품을 한번에 주문합니다. (`OrderService.orderItems()`)
 * **주문 내역 조회:** 자신의 과거 주문 기록을 조회합니다. (`OrderService.listMyOrders()`)
+
+---
 
 ### **🛠 관리자 기능**
 
