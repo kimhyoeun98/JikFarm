@@ -12,9 +12,8 @@ public class UserVO implements Serializable {
 	private String email;
 	private String address;
 	private Date regDate;
-	private String userType;
 	
-	public UserVO(int userNo, String id, String password, String userName, String mobile, String email, String address, Date regDate, String userType) {
+	public UserVO(int userNo, String id, String password, String userName, String mobile, String email, String address, Date regDate) {
 		this.userNo = userNo;
 		this.id = id;
 		this.password = password;
@@ -95,17 +94,9 @@ public class UserVO implements Serializable {
 		this.regDate = regDate;
 	}
 
-	public String getUserType() {
-		return userType;
-	}
-
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
-
 	@Override
 	public String toString() {
-		String output = "[" + userNo + ", " + id + ", " + password + ", " + userName + ", " + regDate + " , " + userType ;
+		String output = "[" + userNo + ", " + id + ", " + password + ", " + userName + ", " + regDate ;
 		if (mobile != null) {
 			output += "(" + mobile + ", " + email + ", " + address +  ")";
 		}
