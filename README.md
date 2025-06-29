@@ -152,7 +152,7 @@ VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 명확하게 정�
    ![전체 클래스 다이어그램 이미지](image/AllclassDiagram.png)
 
 ### 사용자 클래스 다이어그램
-    ![사용자 클래스 다이어그램 이미지](image/UserClassDiagram.png)
+    ![사용자 클래스 다이어그램 이미지](https://github.com/kimhyoeun98/JikFarm/blob/main/image/UserClassDiagram.png?raw=true)
 
 ### 상품 관리 클래스 다이어그램
     ![상품 관리 클래스 다이어그램 이미지](image/ProductClassDiagram.png)
