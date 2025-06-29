@@ -60,6 +60,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 * **설계 및 문서화:** Visual Paradigm, PlantUML, Markdown
 
 <br>
+
 ## 패키지 구조 요약
 
 ```text
