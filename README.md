@@ -149,7 +149,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 명확하게 정의되어 있습니다.
 
 ### 전체 클래스 다이어그램 
-    ![전체 클래스 다이어그램 이미지](image/AllclassDiagram.png)
+    ![전체 클래스 다이어그램 이미지](./image/AllclassDiagram.png)
 
 ### 사용자 클래스 다이어그램
     ![사용자 클래스 다이어그램 이미지](image/UserClassDiagram.png)
