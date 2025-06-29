@@ -139,7 +139,7 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 
 * 시스템의 전체적인 기능과 사용자의 상호작용을 나타냅니다.
 
-    ![유스케이스 다이어그램 이미지](이미지_경로/use_case_diagram.png)
+    ![유스케이스 다이어그램 이미지](image/UseCaseDiagram.png)
 
 <br>
 
@@ -151,26 +151,87 @@ VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 명확하게 정�
 ### 전체 클래스 다이어그램 
    ![전체 클래스 다이어그램 이미지](image/AllclassDiagram.png)
 
+   
+
 ### 사용자 클래스 다이어그램
-   ![사용자 클래스 다이어그램 이미지](image/UserClassDiagram.png)
 
-### 상품 관리 클래스 다이어그램
-   ![상품 관리 클래스 다이어그램 이미지](image/ProductClassDiagram.png)
-
-### 상품 주문 클래스 다이어그램
-   ![상품 주문 클래스 다이어그램 이미지](image/OrderClassDiagram.png)
-
-### 상품 장바구니 클래스 다이어그램
-   ![장바구니 클래스 다이어그램 이미지](image/CartClassDiagram.png)
-    
 <br>
 
-### 3. 액티비티 다이어그램: 상품 주문 (Activity Diagram)
+   ![사용자 클래스 다이어그램 이미지](image/UserClassDiagram.png)
 
+* `UserService` 인터페이스에 회원가입, 로그인, 정보 수정 등 사용자 관련 기능의 명세를 정의합니다.
+* `UserVO` 클래스를 사용하여 아이디, 이름, 주소 등 회원 정보를 하나의 단위로 묶어 계층 간에 전달합니다.
+* `JFUserService` 구현 클래스에서 실제 비즈니스 로직을 처리하며, `UserDAO`를 통해 데이터에 접근합니다.
+* `ObjFileHashMapUserDAO`를 통해 프로그램이 종료되어도 회원 정보가 유지되도록 파일에 영구적으로 저장합니다.
+
+
+
+### 상품 클래스 다이어그램
+
+<br>
+
+   ![상품 클래스 다이어그램 이미지](image/ProductClassDiagram.png)
+   
+* 관리자의 상품 등록/수정/삭제 및 사용자의 상품 조회 기능을 `ProductService` 인터페이스에 정의합니다.
+* `ProductVO` 클래스를 사용하여 상품 번호, 이름, 가격, 재고 등 상품 데이터를 관리합니다.
+* `JFProductService`가 실제 로직을 담당하며, `ObjFileHashMapProductDAO`를 통해 상품 정보를 파일 시스템에 저장하여 관리합니다.
+
+
+
+### 상품 주문 클래스 다이어그램
+
+<br>
+
+   ![상품 주문 클래스 다이어그램 이미지](image/OrderClassDiagram.png)
+
+* `OrderVO`(주문 대표 정보)와 `OrderItemVO`(주문 상품 목록)를 통해 하나의 주문에 여러 상품이 포함되는 복합적인 데이터를 구조화합니다.
+* `OrderService` 인터페이스에 주문 생성, 내 주문 목록 조회 등의 기능을 정의합니다.
+* `OrderServiceImpl`은 주문 생성 시 `ProductService`와 연동하여 상품 재고를 차감하는 등 여러 서비스에 걸친 로직을 처리합니다.
+* 주문 내역은 중요한 영구 데이터이므로, `ObjFileHashMapOrderDAO`를 통해 파일에 저장하여 보관합니다.
+
+
+
+### 상품 장바구니 클래스 다이어그램
+
+<br>
+
+   ![장바구니 클래스 다이어그램 이미지](image/CartClassDiagram.png)
+   
+* 장바구니에 담긴 상품(`productNo`)과 수량(`quantity`)을 `CartItemVO` 객체로 표현합니다.
+* `CartService` 인터페이스를 통해 상품 추가, 목록 조회, 개별 삭제, 전체 비우기 등의 기능을 제공합니다.
+* 장바구니는 사용자가 접속해 있는 동안에만 유지되는 임시 정보이므로, `HashMapCartDAO`를 이용해 메모리에만 데이터를 저장합니다.
+
+    
+
+### 역할별 서비스 호출 구조
+
+<br>
+
+   ![역할별 서비스 호출 관계](image/adminService.png)
+
+* 애플리케이션의 시작점인 `JikFarmConsoleApp`이 사용자의 역할(관리자/일반 회원)을 판단하여 서로 다른 메뉴(`controlAdminMenu`, `controlUserMenu`)를 호출하는 컨트롤러 역할을 합니다.
+* **관리자(Admin)**는 상품, 회원, 주문 등 시스템의 모든 핵심 기능(`ProductService`, `UserService`, `OrderService`)에 접근하여 관리합니다.
+* **일반 회원(Member)**은 상품을 조회하고 자신의 주문 내역을 확인하는 등 허용된 서비스에만 접근하여 기능을 사용합니다.
+
+
+
+### 3. 액티비티 다이어그램
+
+<br>
+
+
+### 상품 주문
 * 사용자의 상품 주문 기능에 대한 내부 처리 흐름을 순서도 형식으로 나타냅니다.
 
-    ![액티비티 다이어그램 이미지](이미지_경로/activity_diagram_order.png)
+   ![액티비티 다이어그램 이미지](image/orderActivity.png)
 
+  
+
+### 상품 등록
+
+   ![액티비티 다이어그램 이미지](image/productActivity.png)
+    
+  
 <br>
 
 ## ⚙️ 작동 시나리오
