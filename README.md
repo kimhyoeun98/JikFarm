@@ -143,12 +143,26 @@ JikFarm은 텍스트 기반의 콘솔 환경에서 동작하는 온라인 농산
 
 <br>
 
-### 2. 전체 클래스 다이어그램 (Overall Class Diagram)
+### 2. 클래스 다이어그램 (Overall Class Diagram)
 
-* 프로젝트의 실제 패키지 구조를 기반으로 클래스들의 관계를 시각화하여 전체 시스템의 아키텍처를 보여줍니다.
+본 프로젝트의 주요 도메인 구조를 시각화한 클래스 다이어그램입니다.  
+VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 명확하게 정의되어 있습니다.
 
-    ![클래스 다이어그램 이미지](이미지_경로/class_diagram.png)
+### 전체 클래스 다이어그램 
+    ![전체 클래스 다이어그램 이미지](image/AllclassDiagram.png)
 
+### 사용자 클래스 다이어그램
+    ![사용자 클래스 다이어그램 이미지](image/UserClassDiagram.png)
+
+### 상품 관리 클래스 다이어그램
+    ![상품 관리 클래스 다이어그램 이미지](image/ProductClassDiagram.png)
+
+### 상품 주문 클래스 다이어그램
+    ![상품 주문 클래스 다이어그램 이미지](image/OrderClassDiagram.png)
+
+### 상품 장바구니 클래스 다이어그램
+    ![장바구니 클래스 다이어그램 이미지](image/CartClassDiagram.png)
+    
 <br>
 
 ### 3. 액티비티 다이어그램: 상품 주문 (Activity Diagram)
