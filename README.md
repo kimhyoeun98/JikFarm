@@ -370,7 +370,8 @@ VO/DAO/Service 계층이 분리되어 있으며, 각 책임이 정의되어 있�
 
 ## 콘솔 앱 예시 화면
 
-[![농수산물 직거래 쇼핑몰 'JIKFARM' 시연 영상](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/RpFFaZZrgoc?si=r0Ex0TbkPjkNX2Wk)
+### 관리자 상품 등록 시연 영상
+[![프로젝트 시연 영상](image/JikFarm.png)](https://www.youtube.com/watch?v=RpFFaZZrgoc "영상 보러가기")
 
 ## 프로젝트 회고
 
